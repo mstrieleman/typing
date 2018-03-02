@@ -1,9 +1,36 @@
-.tutor {
-  margin-top: 7.5%;
+.entire-word {
+  margin-top: 1%;
   text-align: center;
   font-size: 7em;
   font-family: "PT Mono", monospace;
   color: #1c1d1e;
+}
+
+.first-letter {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 7em;
+  font-family: "PT Mono", monospace;
+  color: #1c1d1e;
+}
+
+.instructions {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1em;
+  font-family: "PT Mono", monospace;
+  color: #1c1d1e;
+}
+
+.input {
+  text-align: center;
+  font-size: 7em;
+}
+
+.break {
+  margin-top: 1%;
+  border-style: solid;
+  border-width: thin;
 }
 
 body {

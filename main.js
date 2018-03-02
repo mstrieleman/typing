@@ -1,96 +1,26 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-function test() {
-  document.body.onload = test;
-  var wordsToBePrinted = _.sample(wordsToBeTyped, 1);
-  document.querySelector(".tutor").textContent = wordsToBePrinted;
-}
+Array.prototype.random = function() {
+  return this[Math.floor(Math.random() * this.length)];
+};
 
-test();
-
-var wordsToBeTyped = [
-  "Batrachomyomachy",
-  "Billingsgate",
-  "Bloviate",
-  "Blunderbuss",
-  "Borborygm",
+var words = [
   "Boustrophedon",
   "Bowyang",
-  "Brouhaha",
-  "Bumbershoot",
-  "Canoodle",
-  "Cantankerous",
-  "Catercornered",
-  "Codswallop",
-  "Collop",
-  "Collywobbles",
-  "Comeuppance",
-  "Crapulence",
-  "Discombobulate",
-  "Donnybrook",
-  "Doozy",
-  "Dudgeon",
-  "Eructation",
-  "Fard",
   "Fartlek",
-  "Fatuous",
-  "Filibuster",
-  "Firkin",
-  "Flibbertigibbet",
-  "Flummox",
-  "Folderol",
-  "Fuddy-duddy",
-  "Furbelow",
-  "Furphy",
-  "Gaberlunzie",
-  "Gardyloo!",
-  "Gazump",
-  "Gobbledygook",
-  "Gobemouche",
-  "Gongoozle",
-  "Goombah",
-  "Hemidemisemiquaver",
-  "Hobbledehoy",
-  "Hocus-pocus",
-  "Hoosegow",
-  "Hootenanny",
-  "Jackanapes",
   "Rapscallion",
-  "Kerfuffle",
-  "La-di-da",
-  "Lagopodous",
-  "Lickety-split",
-  "Logorrhea",
-  "Loquaciousness",
-  "Lollygag",
-  "Malarkey",
-  "Maverick",
-  "Mollycoddle",
-  "Mugwump",
-  "Mumpsimus",
-  "Nincompoop",
-  "Oocephalus",
-  "Ornery",
-  "Pandiculation",
-  "Panjandrum",
-  "Pettifogger",
-  "Pratfal",
-  "Rambunctious",
-  "Ranivorous",
-  "Rigmarole",
-  "Sialoquent",
-  "Skedaddle",
-  "Skullduggery",
-  "Slangwhanger",
-  "Smellfungus",
-  "Snickersnee",
-  "Snollygoster",
-  "Snool",
-  "Tatterdemalion",
-  "Troglodyte",
-  "Turdiform",
-  "Unremacadamized",
-  "Vomitory",
-  "Widdershins"
+  "Vomitory"
 ];
+
+var getRandom = words.random();
+var splitArray = getRandom.split("");
+var returnFirst = splitArray.slice(0)[0]
+
+function print() {
+  document.body.onload = print;
+  document.querySelector(".entire-word").textContent = getRandom;
+  document.querySelector(".first-letter").textContent = returnFirst;
+}
+
+print();
