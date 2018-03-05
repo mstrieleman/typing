@@ -40,7 +40,6 @@ function letterCheck() {
   const keyName = event.key;
   eventLetter = currentLetter(position);
   if (run < splitArrayLength) {
-    console.log(run);
     if (event.key === eventLetter) {
       run = run + 1;
       score = score + 1;
