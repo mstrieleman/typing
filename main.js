@@ -1,26 +1,44 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+document.addEventListener('keypress', event => {
+  letterCheck(event.key);
+});
 
-Array.prototype.random = function() {
-  return this[Math.floor(Math.random() * this.length)];
-};
-
-var words = [
-  "Boustrophedon",
-  "Bowyang",
-  "Fartlek",
-  "Rapscallion",
-  "Vomitory"
-];
-
-var getRandom = words.random();
-var splitArray = getRandom.split("");
-var returnFirst = splitArray.slice(0)[0]
-
-function print() {
-  document.body.onload = print;
-  document.querySelector(".entire-word").textContent = getRandom;
-  document.querySelector(".first-letter").textContent = returnFirst;
+function randomWord(words) {
+  return words[Math.floor(Math.random() * words.length)];
+}
+function updateLetter(letter, element) {
+  element.textContent = letter;
 }
 
-print();
+function updateScore(score, element) {
+  element.textContent = score;
+}
+
+function initContent() {
+  document.body.onload = initContent;
+  document.querySelector('.entire-word').textContent = letters.join('');
+  document.querySelector('.letter').textContent = letters[0];
+}
+
+function letterCheck(letter) {
+  if (position < letters.length - 1) {
+    if (letter === letters[position]) {
+      score = score + 1;
+      position = position + 1;
+      updateLetter(letters[position], document.querySelector('.letter'));
+      updateScore(score, document.querySelector('.score'));
+    }
+    else {
+      alert('WRONG LETTER BRUH');
+    }
+  }
+  else {
+    alert('YOU DID IT BRUH');
+    location.reload();
+  }
+}
+
+var position = 0;
+var words = ['Boustrophedon', 'Bowyang', 'Fartlek', 'Rapscallion', 'Vomitory'];
+var letters = randomWord(words).split('');
+var score = 0;
+initContent();

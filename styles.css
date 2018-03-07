@@ -6,7 +6,7 @@
   color: #1c1d1e;
 }
 
-.first-letter {
+.letter {
   margin-top: 1%;
   text-align: center;
   font-size: 7em;
@@ -28,9 +28,25 @@
 }
 
 .break {
-  margin-top: 1%;
+  margin-top: 3%;
   border-style: solid;
   border-width: thin;
+}
+
+.score-title {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 1em;
+  font-family: "PT Mono", monospace;
+  color: #1c1d1e;
+}
+
+.score {
+  margin-top: 1%;
+  text-align: center;
+  font-size: 7em;
+  font-family: "PT Mono", monospace;
+  color: green;
 }
 
 body {
